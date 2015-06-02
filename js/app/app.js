@@ -1,17 +1,17 @@
-angular.module('HateMalo', [ngRoute])
+angular.module('HateMalo', ['ngRoute'])
 	.config(['$routeProvider', function($routeProvider) {
 		$routeProvider
 			.when('/home', {
-				templateUrl: 'intro.html'
+				templateUrl: 'views/intro.html'
 			})
 			.when('/assessment', {
-				templateUrl: 'assessment.html'
+				templateUrl: 'views/assessment.html'
 			})
 			.when('/inventory',{
-				templateUrl: 'inventory.html'
+				templateUrl: 'views/inventory.html'
 			})
 			.when('reports', {
-				templateUrl: 'reports.html'
+				templateUrl: 'views/reports.html'
 			})
 			.otherwise({redirectTo: '/home'});
 	}]);
