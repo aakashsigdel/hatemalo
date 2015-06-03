@@ -40,7 +40,58 @@ angular.module('HateMalo')
 		};*/
 
 
+	}])
+
+	//Service for data about donors
+	.factory('DonorService', ['$http', function($http) {
+		return {
+			getAllDonors: function() {
+				return $http.get('/api/donors');
+			},
+			getDonorDetails: function(donorId) {
+				return $http.get('/api/donors/' + donorId);
+			}
+		};
+	}])
+
+	//service for data about profile of a group
+	.factory('ProfileService', ['$http', function($http) {
+		var profileData = {donorAgre:{}, assessmentAgre: {}, profilePic: '', profileName: '', profileDesc: ''};
+
+		var fetchDonorAgre = function() {
+				return $http.get('/api/donors/donorAgre')
+							.then(function(response) {
+								profileData.donorAgre = response.data;
+
+								return response;
+							});
+			}(); //calling inline
+
+			var fetchAssessmentAgre = function() {
+				return $http.get('/api/assessments/assessmentAgre')
+							.then(function(response) {
+								profileData.assessmentAgre = response.data;
+
+								return response;
+							});
+			}(); //calling inline
+
+			var fetchProfileDetails = function(){
+				return $http.get('api/profileDetails')
+								.then(function(response) {
+									profileData.profilePic = response.data.profilePic;
+									profileData.profileName = response.data.profileName;
+									profileData.profileDesc = response.data.profileDesc;
+
+									return response;
+								});
+			}();
+
+		return profileData;
 	}]);
+
+
+
 
 /*
 	//Login service for loging in to the system and checking the session
