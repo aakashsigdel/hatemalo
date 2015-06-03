@@ -1,9 +1,9 @@
 angular.module('HateMalo')
 	.factory('AssessmentService', ['$http', function($http) {
 		//dummy service data
-		var data = [
+		var AssessmentData = [
 			{
-				district: 'Gorkha', vdc: 'RamShah Gaun',
+				district: 'Gorkha', vdc: 'RamShah Gaun', groupId: 1,
 				details: [
 					{name: 'Ram Badhur', age: 33, sex: 'male', occupation: 'farmer', risk: 'moderate'},
 					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'},
@@ -11,7 +11,7 @@ angular.module('HateMalo')
 				]
 			},
 			{
-				district: 'Sindhupalchow', vdc: 'Chiple Gaun',
+				district: 'Sindhupalchow', vdc: 'Chiple Gaun', groupId: 2,
 				details: [
 					{name: 'Masine Gaire', age: 36, sex: 'male', occupation: 'farmer', risk: 'high'},
 					{name: 'Lalit Pokhrel', age: 56, sex: 'male', occupation: 'Labour', risk: 'urgent'},
@@ -22,14 +22,14 @@ angular.module('HateMalo')
 		//dummy service functions
 		return {
 			getAllAssessment: function() {
-				return data;
+				return AssessmentData;
 			},
 			getAssessmentDetails: function(assessmentId) {
-				return data[assessmentId];
+				return AssessmentData[assessmentId];
 			}
 		};
 
-		//Acutal service code
+		//Acutal AssesmentService code
 		/*return {
 			getAllAssessment: function() {
 				return $http.get('/api/assessments');
@@ -44,50 +44,70 @@ angular.module('HateMalo')
 
 	//Service for data about donors
 	.factory('DonorService', ['$http', function($http) {
+		//dummy data
+		var donorData = [
+			{donorName: 'Aakash Sigdel', amount: 500, country: 'Nepal', groupId: 1},
+			{donorName: 'Pravin Bashyal', amount: 1000, country: 'Andora', groupId: 2},
+			{donorName: 'Nabeen khadka', amount: 300, country: 'Japan', groupId: 1},
+			{donorName: 'Prakash Gaire', amount: 600, country: 'China', groupId: 1}
+		];
+
+		//dummy functions
 		return {
+			getAllDonors: function() {
+				return donorData;
+			},
+			getDonorDetails: function(donorId) {
+				return donorData[donorId];
+			}
+		};
+
+		//Actual DonorService Code
+		/*return {
 			getAllDonors: function() {
 				return $http.get('/api/donors');
 			},
 			getDonorDetails: function(donorId) {
 				return $http.get('/api/donors/' + donorId);
 			}
-		};
+		};*/
 	}])
 
 	//service for data about profile of a group
 	.factory('ProfileService', ['$http', function($http) {
-		var profileData = {donorAgre:{}, assessmentAgre: {}, profilePic: '', profileName: '', profileDesc: ''};
+		//dummy data
+		var profileData = [
+			{donorAgre: {noOfDonors: 3, totalDonation: 1400}, assessmentAgre: 1, profilePic: 'imgs/profile1.jpg', profileName: 'Kathmandu Club Club', profileDesc: 'Some people say my love canot be true, but beleive me my love and i will show you'},
+			{donorAgre: {noOfDonors:1, totalDonation: 1000}, assessmentAgre: 1, profilePic: 'imgs/profile2.jpg', profileName: 'Chitwan Youth Club', profileDesc: 'Bheta vayeau aaja hami syndicate ko gate ko maja hami'}
+		];
 
-		var fetchDonorAgre = function() {
-				return $http.get('/api/donors/donorAgre')
-							.then(function(response) {
-								profileData.donorAgre = response.data;
+		//dummy functions
+		return {
+			fetchDonorAgre: function(groupId) {
+				return profileData[groupId].donorAgre;
+			},
+			fetchAssessmentAgre: function(groupId) {
+				return profileData[groupId].assessmentAgre;
+			},
+			fetchProfileDetails: function(groupId) {
+				return {profilePic: profileData[groupId].profilePic, profileName: profileData[groupId].profileName, profileDesc: profileData[groupId].profileDesc};
+			}
+		};
 
-								return response;
-							});
-			}(); //calling inline
+		//acutal ProfileService code
+		/*var service = {
+			fetchDonorAgre : function(groupId) {
+					return $http.get('/api/donors/donorAgre/' + groupId);
+				},
+				fetchAssessmentAgre : function(groupId) {
+					return $http.get('/api/assessments/assessmentAgre/' + groupId);
+				},
+				fetchProfileDetails : function(groupId) {
+					return $http.get('api/profileDetails/' + groupId);
+				}
+		};
 
-			var fetchAssessmentAgre = function() {
-				return $http.get('/api/assessments/assessmentAgre')
-							.then(function(response) {
-								profileData.assessmentAgre = response.data;
-
-								return response;
-							});
-			}(); //calling inline
-
-			var fetchProfileDetails = function(){
-				return $http.get('api/profileDetails')
-								.then(function(response) {
-									profileData.profilePic = response.data.profilePic;
-									profileData.profileName = response.data.profileName;
-									profileData.profileDesc = response.data.profileDesc;
-
-									return response;
-								});
-			}();
-
-		return profileData;
+		return service;*/
 	}]);
 
 
