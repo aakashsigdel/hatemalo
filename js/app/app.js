@@ -12,8 +12,9 @@ angular.module('HateMalo', ['ngRoute'])
 			.when('/inventory',{
 				templateUrl: 'views/inventory.html'
 			})
-			.when('reports', {
-				templateUrl: 'views/reports.html'
+			.when('/reports/assessmentId/:assessmentId', {
+				templateUrl: 'views/reports.html',
+				controller: 'reportCtrl'
 			})
 			.otherwise({redirectTo: '/home'});
 	}]);
