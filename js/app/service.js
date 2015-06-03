@@ -7,7 +7,11 @@ angular.module('HateMalo')
 				details: [
 					{name: 'Ram Badhur', age: 33, sex: 'male', occupation: 'farmer', risk: 'moderate'},
 					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'},
-					{name: 'Hunu Maya Rai', age: 54, sex: 'female', occupation: 'Shopkeeper', risk: 'nominal'}
+					{name: 'Hunu Maya Rai', age: 54, sex: 'female', occupation: 'Shopkeeper', risk: 'nominal'},
+					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'},
+					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'},
+					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'},
+					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'}
 				]
 			},
 			{
@@ -15,13 +19,77 @@ angular.module('HateMalo')
 				details: [
 					{name: 'Masine Gaire', age: 36, sex: 'male', occupation: 'farmer', risk: 'high'},
 					{name: 'Lalit Pokhrel', age: 56, sex: 'male', occupation: 'Labour', risk: 'urgent'},
-					{name: 'Jitendra Badhadur Thapa', age: 18, sex: 'male', occupation: 'Shopkeeper', risk: 'nominal'}
+					{name: 'Jitendra Badhadur Thapa', age: 18, sex: 'male', occupation: 'Shopkeeper', risk: 'nominal'},
+					{name: 'Masine Gaire', age: 36, sex: 'male', occupation: 'farmer', risk: 'high'},
+					{name: 'Masine Gaire', age: 36, sex: 'male', occupation: 'farmer', risk: 'high'},
+					{name: 'Masine Gaire', age: 36, sex: 'male', occupation: 'farmer', risk: 'high'},
+					{name: 'Masine Gaire', age: 36, sex: 'male', occupation: 'farmer', risk: 'high'}
+				]
+			},
+			{
+				district: 'Gorkha', vdc: 'RamShah Gaun', groupId: 1,
+				details: [
+					{name: 'Ram Badhur', age: 33, sex: 'male', occupation: 'farmer', risk: 'moderate'},
+					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'},
+					{name: 'Hunu Maya Rai', age: 54, sex: 'female', occupation: 'Shopkeeper', risk: 'nominal'},
+					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'},
+					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'},
+					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'},
+					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'}
+				]
+			},
+			{
+				district: 'Gorkha', vdc: 'RamShah Gaun', groupId: 1,
+				details: [
+					{name: 'Ram Badhur', age: 33, sex: 'male', occupation: 'farmer', risk: 'moderate'},
+					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'},
+					{name: 'Hunu Maya Rai', age: 54, sex: 'female', occupation: 'Shopkeeper', risk: 'nominal'},
+					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'},
+					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'},
+					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'},
+					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'}
+				]
+			},
+			{
+				district: 'Gorkha', vdc: 'RamShah Gaun', groupId: 1,
+				details: [
+					{name: 'Ram Badhur', age: 33, sex: 'male', occupation: 'farmer', risk: 'moderate'},
+					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'},
+					{name: 'Hunu Maya Rai', age: 54, sex: 'female', occupation: 'Shopkeeper', risk: 'nominal'},
+					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'},
+					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'},
+					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'},
+					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'}
+				]
+			},
+			{
+				district: 'Gorkha', vdc: 'RamShah Gaun', groupId: 1,
+				details: [
+					{name: 'Ram Badhur', age: 33, sex: 'male', occupation: 'farmer', risk: 'moderate'},
+					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'},
+					{name: 'Hunu Maya Rai', age: 54, sex: 'female', occupation: 'Shopkeeper', risk: 'nominal'},
+					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'},
+					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'},
+					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'},
+					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'}
+				]
+			},
+			{
+				district: 'Gorkha', vdc: 'RamShah Gaun', groupId: 1,
+				details: [
+					{name: 'Ram Badhur', age: 33, sex: 'male', occupation: 'farmer', risk: 'moderate'},
+					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'},
+					{name: 'Hunu Maya Rai', age: 54, sex: 'female', occupation: 'Shopkeeper', risk: 'nominal'},
+					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'},
+					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'},
+					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'},
+					{name: 'Jamuna Sapkota', age: 24, sex: 'female', occupation: 'house wife', risk: 'urgent'}
 				]
 			}
 		];
 		//dummy service functions
 		return {
-			getAllAssessment: function() {
+			getAllAssessments: function() {
 				return AssessmentData;
 			},
 			getAssessmentDetails: function(assessmentId) {
@@ -31,7 +99,7 @@ angular.module('HateMalo')
 
 		//Acutal AssesmentService code
 		/*return {
-			getAllAssessment: function() {
+			getAllAssessments: function() {
 				return $http.get('/api/assessments');
 			},
 			getAssessmentDetails: function(assessmentId) {
@@ -82,7 +150,7 @@ angular.module('HateMalo')
 		];
 
 		//dummy functions
-		return {
+		/*return {
 			fetchDonorAgre: function(groupId) {
 				return profileData[groupId].donorAgre;
 			},
@@ -91,6 +159,11 @@ angular.module('HateMalo')
 			},
 			fetchProfileDetails: function(groupId) {
 				return {profilePic: profileData[groupId].profilePic, profileName: profileData[groupId].profileName, profileDesc: profileData[groupId].profileDesc};
+			}
+		};*/
+		return {
+			getProfileDetails: function(groupId) {
+				return profileData[groupId];
 			}
 		};
 

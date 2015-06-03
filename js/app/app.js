@@ -6,7 +6,8 @@ angular.module('HateMalo', ['ngRoute'])
 				controller: 'introCtrl'
 			})
 			.when('/assessment', {
-				templateUrl: 'views/assessment.html'
+				templateUrl: 'views/assessment.html',
+				controller: 'assessmentCtrl'
 			})
 			.when('/inventory',{
 				templateUrl: 'views/inventory.html'

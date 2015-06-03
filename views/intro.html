@@ -3,12 +3,53 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<div class="col-lg-3">
-						<a class="thumbnail">
-							<img src="imgs/profile.jpg">
-						</a>
+
+					<div class="col-lg-6">
+						<!-- <a class="thumbnail"> -->
+							<img ng-src="{{profileData.profilePic}}" class="img-circle" width="200" height="200">
+						<!-- </a> -->
+						<h3>
+							<span class="label label-default" ng-bind="profileData.profileName"></span>
+						</h3>
 					</div>
-					<div class="col-lg-9"></div>
+
+					<div class="col-lg-6">
+						<div class="col-lg-12">
+							<div class="col-lg-8">
+								<h3>
+									<!-- <div class="well well-lg pull-left text-left" ng-bind="profileData.profileDesc"></div> -->
+									<blockquote><p class="text-left desc-box"><h4>{{profileData.profileDesc}}</h4></p></blockquote>
+								</h3>
+							</div>
+
+							<div class="col-lg-4"></div>
+
+						</div>
+					</div>
+
+					<hr width="90%">
+
+					<div class="col-lg-12">
+						<div class="col-lg-2"></div>
+
+							<div class="col-lg-8">
+
+								<div class="alert alert-info agre-div" role="alert">
+									Total Number Of Assessment: &nbsp;&nbsp;&lt; {{profileData.assessmentAgre}} &gt;
+								</div>
+								<div class="alert alert-info agre-div" role="alert">
+									Total Number Of Donors: &nbsp;&nbsp;<a href="#/donor" style="color:#D42646">&lt; {{profileData.donorAgre.noOfDonors}} &gt;</a>
+								</div>
+								<div class="alert alert-info agre-div" role="alert">
+									Total Donation Amount: &nbsp;&nbsp;&lt; ${{profileData.donorAgre.totalDonation}} &gt;
+								</div>
+
+							</div>
+
+							<div class="col-lg-2"></div>
+
+						</div>
+
 				</div>
 			</div>
 		</div>

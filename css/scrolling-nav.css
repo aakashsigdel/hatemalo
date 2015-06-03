@@ -10,7 +10,29 @@ html {
 
 .div-align-with-nav {
     height: 100%;
-    padding-top: 150px;
+    padding-top: 100px;
     text-align: center;
     background: #fff;
+}
+
+.desc-box {
+	padding-top: 50px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.agre-div {
+    font-size: 130%;
+    font-weight: bold;
+}
+
+h1 {
+    margin: 0px;
 }
