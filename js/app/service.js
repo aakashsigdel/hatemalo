@@ -1,5 +1,6 @@
 angular.module('HateMalo')
 	.factory('AssessmentService', ['$http', function($http) {
+		//dummy service data
 		var data = [
 			{
 				district: 'Gorkha', vdc: 'RamShah Gaun',
@@ -18,6 +19,7 @@ angular.module('HateMalo')
 				]
 			}
 		];
+		//dummy service functions
 		return {
 			getAllAssessment: function() {
 				return data;
@@ -26,4 +28,41 @@ angular.module('HateMalo')
 				return data[assessmentId];
 			}
 		};
+
+		//Acutal service code
+		/*return {
+			getAllAssessment: function() {
+				return $http.get('/api/assessments');
+			},
+			getAssessmentDetails: function(assessmentId) {
+				return  $http.geet('/api/assessments/' + assessmentId);
+			},
+		};*/
+
+
 	}]);
+
+/*
+	//Login service for loging in to the system and checking the session
+	.factory('LoginService', ['$http', function($http) {
+		var service = {
+			loginStatus: false,
+
+			session: function() {
+				return $http.get('/api/session')
+								.then(function(response){
+									service.loginStatus = true;
+									return response;
+								});
+			},
+
+			login: function(user) {
+				return $http.post('/api/login', user)
+								.then(function(response) {
+									service.loginStatus = true;
+								});
+			}
+		};
+		return service;
+	}]);
+*/
