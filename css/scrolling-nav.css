@@ -40,3 +40,12 @@ h1 {
 .block-element {
     display: block;
 }
+
+.login-btn {
+    margin-top: 2em;
+    margin-left: 1em
+}
+
+.forgot-password {
+    margin-top: 2em;
+}
