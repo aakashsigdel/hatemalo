@@ -5,29 +5,36 @@
 	<div class="col-lg-6">
 
 
-	<form>
+	<form ng-submit="submit()" id="login_form" name="login_form">
 
 		<div class="well well-lg col-lg-12">
 
 			<div class="col-lg-6">
 
 				<div class="input-group">
-  				<span class="input-group-addon" id="basic-addon1">User Name:</span>
-  				<input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+  				<span class="input-group-addon" id="username_label">User Name:</span>
+  				<!-- Need more strict validation as it only validates @ and nothing else -->
+  				<input type="email" 
+  					class="form-control" 
+  					placeholder="Username" 
+  					aria-describedby="basic-addon1" 
+  					ng-model="user.userName" 
+  					required 
+  					ng-minlength=6>
 				</div>
-
-				<!-- <div class="login-btn">
-					<input type="submit" class="btn btn-success pull-left" value="Login">
-				</div>
-				<div style="clear:both"></div> -->
 
 			</div>
 
 			<div class="col-lg-6">
 
 				<div class="input-group">
-	  				<span class="input-group-addon" id="basic-addon1">Password</span>
-	  				<input type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
+	  				<span class="input-group-addon" id="password_label">Password</span>
+	  				<input type="password" 
+	  				class="form-control" 
+	  				placeholder="Password" 
+	  				aria-describedby="basic-addon1" 
+	  				ng-model="user.password" 
+	  				required>
 				</div>
 
 
@@ -35,7 +42,10 @@
 			</div>
 
 			<div class="login-btn pull-left">
-					<input type="submit" class="btn btn-success pull-left" value="Login">
+					<input type="submit" 
+					class="btn btn-success pull-left" 
+					value="Login" 
+					ng-disabled="login_form.$invalid">
 			</div>
 
 			<div class="forgot-password pull-right">

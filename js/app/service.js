@@ -145,7 +145,7 @@ angular.module('HateMalo')
 	.factory('ProfileService', ['$http', function($http) {
 		//dummy data
 		var profileData = [
-			{donorAgre: {noOfDonors: 3, totalDonation: 1400}, assessmentAgre: 1, profilePic: 'imgs/profile1.jpg', profileName: 'Kathmandu Club Club', profileDesc: 'Some people say my love canot be true, but beleive me my love and i will show you'},
+			{donorAgre: {noOfDonors: 3, totalDonation: 1400}, assessmentAgre: 1, profilePic: 'imgs/profile1.jpg', profileName: 'Kathmandu Club Club', profileDesc: 'Some people say my love canot be true, but believe me my love and i will show you'},
 			{donorAgre: {noOfDonors:1, totalDonation: 1000}, assessmentAgre: 1, profilePic: 'imgs/profile2.jpg', profileName: 'Chitwan Youth Club', profileDesc: 'Bheta vayeau aaja hami syndicate ko gate ko maja hami'}
 		];
 
@@ -181,7 +181,7 @@ angular.module('HateMalo')
 		};
 
 		return service;*/
-	}]);
+	}])
 
 
 
@@ -210,3 +210,6 @@ angular.module('HateMalo')
 		return service;
 	}]);
 */
+	.factory('LoginService', ['$http', function() {
+		return {};
+	}]);

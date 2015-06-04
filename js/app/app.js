@@ -17,7 +17,8 @@ angular.module('HateMalo', ['ngRoute'])
 				controller: 'reportCtrl'
 			})
 			.when('/login', {
-				templateUrl: 'views/login.html'
+				templateUrl: 'views/login.html',
+				controller: 'loginCtrl'
 			})
 			.otherwise({redirectTo: '/home'});
 	}]);

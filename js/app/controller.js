@@ -5,6 +5,12 @@ angular.module('HateMalo')
 		LoginService.session();
 	}])
 
+	.controller('loginCtrl', ['$scope', 'LoginService', function($scope, LoginService) {
+		$scope.submit = function() {
+			console.log($scope.user);
+		};
+	}])
+
 	.controller('introCtrl', ['$scope', 'ProfileService', function($scope, ProfileService) {
 		$scope.profileData = ProfileService.getProfileDetails(0);
 	}])
