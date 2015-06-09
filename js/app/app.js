@@ -21,6 +21,10 @@ angular.module('HateMalo', ['ngRoute'])
 				templateUrl: 'views/login.html',
 				controller: 'loginCtrl'
 			})
+			.when('/donors', {
+				templateUrl: 'views/donor.html',
+				controller: 'donorCtrl'
+			})
 			.otherwise({redirectTo: '/home'});
 	}]);
 

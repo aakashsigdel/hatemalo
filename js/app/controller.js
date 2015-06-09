@@ -42,4 +42,14 @@ angular.module('HateMalo')
 				.then(function(response) {
 					$scope.assessmentDetails = response.data;
 				});
-	}]);
+	}])
+
+	.controller('donorCtrl', ['$scope', 'DonorService', 'LoginService',
+		function($scope, DonorService, LoginService) {
+			$scope.donorsList = [];
+
+			DonorService.getDonors(LoginService.getGroupId())
+				.then(function(response) {
+					$scope.donorsList = response.data;
+				});
+		}]);

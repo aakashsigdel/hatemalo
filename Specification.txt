@@ -44,7 +44,7 @@ assessmentData
 Api
 -------
 /api/donors
-/api/donors/:donorId
+/api/donors/:groupId
 
 donorData
 ----------

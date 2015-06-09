@@ -1,0 +1,33 @@
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+
+
+			<div ng-repeat="donor in donorsList">
+						<div class="panel panel-info">
+						  <div class="panel-heading col-lg-12">
+
+							  <div class="col-lg-4">
+							  	<h3 class="panel-title">{{donor.donorName}}</h3>
+							  </div>
+
+							  <div class="col-lg-4">
+							  	<h3 class="panel-title">{{donor.country}}</h3>
+							  </div>
+
+							  <div class="col-lg-4">
+							  	<h3 class="panel-title">${{donor.amount}}</h3>
+							  </div>
+
+
+						  </div>
+						  <div class="panel-body">
+						    {{donor.donorDesc}}
+						  </div>
+						</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>

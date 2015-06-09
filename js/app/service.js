@@ -14,34 +14,13 @@ angular.module('HateMalo')
 	}])
 
 	//Service for data about donors
-	.factory('DonorService', ['$http', function($http) {
-		//dummy data
-		var donorData = [
-			{donorName: 'Aakash Sigdel', amount: 500, country: 'Nepal', groupId: 1},
-			{donorName: 'Pravin Bashyal', amount: 1000, country: 'Andora', groupId: 2},
-			{donorName: 'Nabeen khadka', amount: 300, country: 'Japan', groupId: 1},
-			{donorName: 'Prakash Gaire', amount: 600, country: 'China', groupId: 1}
-		];
-
-		//dummy functions
+	.factory('DonorService', ['$http', 'APIDOMAIN', function($http, APIDOMAIN) {
+		//Actual DonorService Code
 		return {
-			getAllDonors: function() {
-				return donorData;
-			},
-			getDonorDetails: function(donorId) {
-				return donorData[donorId];
+			getDonors: function(groupId) {
+				return $http.get(APIDOMAIN + '/api/donors/' + groupId);
 			}
 		};
-
-		//Actual DonorService Code
-		/*return {
-			getAllDonors: function() {
-				return $http.get('/api/donors');
-			},
-			getDonorDetails: function(donorId) {
-				return $http.get('/api/donors/' + donorId);
-			}
-		};*/
 	}])
 
 	//service for data about profile of a group
