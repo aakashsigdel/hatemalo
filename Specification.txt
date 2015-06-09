@@ -1,6 +1,14 @@
 Data Specification:
 ======================
 
+Api
+--------
+=>	/api/assessments
+=>	/api/assessment/:assessmentId
+=> 	/api/group_assessments/:groupId
+
+
+---------------
 assessmentData
 --------------
 [
@@ -32,8 +40,14 @@ assessmentData
 
 
 
+
+Api
+-------
+/api/donors
+/api/donors/:donorId
+
 donorData
------------
+----------
 [
 	{donorName: 'Aakash Sigdel', amount: 500, country: 'Nepal', groupId: 1},
 	{donorName: 'Pravin Bashyal', amount: 1000, country: 'Andora', groupId: 2},
@@ -41,6 +55,12 @@ donorData
 	{donorName: 'Prakash Gaire', amount: 600, country: 'China', groupId: 1}
 ]
 
+
+
+
+Api:
+-----
+/api/group/:group_id
 
 aggregrated Profile Data should be returned in the following format:
 --------------------------------------------------------------------
