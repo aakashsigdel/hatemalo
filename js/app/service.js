@@ -60,7 +60,7 @@ angular.module('HateMalo')
 	}]);
 */
 	.factory('LoginService', ['$http', function() {
-		var groupId = 1;
+		var groupId = 2;
 		var groupName = "Ktm Club Club";
 		return {
 			getGroupId: function() {
