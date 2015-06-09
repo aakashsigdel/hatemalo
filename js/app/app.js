@@ -1,4 +1,5 @@
 angular.module('HateMalo', ['ngRoute'])
+	.constant('APIDOMAIN', 'http://asigdel:8080/RESTService')
 	.config(['$routeProvider', function($routeProvider) {
 		$routeProvider
 			.when('/home', {
@@ -22,3 +23,4 @@ angular.module('HateMalo', ['ngRoute'])
 			})
 			.otherwise({redirectTo: '/home'});
 	}]);
+

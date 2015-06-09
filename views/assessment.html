@@ -10,11 +10,11 @@
 								<div class="panel panel-info">
 									<div class="panel-heading">
 										<h3 class="panel-title">
-											<a ng-href="#reports/assessmentId/{{$index}}">{{assessment.district}}, {{assessment.vdc}}</a>
+											<a ng-href="#reports/assessmentId/{{assessment.id}}">{{assessment.district}}, {{assessment.vdc}}</a>
 										</h3>
 									</div>
 									<div class="panel-body">
-										<span ng-repeat="person in assessment.details | limitTo:5">
+										<span ng-repeat="person in assessment.assessmentDetails | limitTo:5">
 											{{person.name}},
 										</span>
 										<span>...</span>

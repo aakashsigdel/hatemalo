@@ -17,7 +17,7 @@
 						<h3>
 							<blockquote>
 								<p class="text-left desc-box">
-									<h4>{{profileData.profileDesc}}</h4>
+									<h4>{{profileData.group_desc}}</h4>
 								</p>
 							</blockquote>
 						</h3>
@@ -36,13 +36,13 @@
 					<div class="col-lg-8">
 
 						<div class="alert alert-info agre-div" role="alert">
-							Total Number Of Assessment: &nbsp;&nbsp;&lt; {{profileData.assessmentAgre}} &gt;
+							Total Number Of Assessment: &nbsp;&nbsp;&lt; {{profileData.numOfAssessments}} &gt;
 						</div>
 						<div class="alert alert-info agre-div" role="alert">
-							Total Number Of Donors: &nbsp;&nbsp;<a href="#/donor" style="color:#D42646">&lt; {{profileData.donorAgre.noOfDonors}} &gt;</a>
+							Total Number Of Donors: &nbsp;&nbsp;<a href="#/donor" style="color:#D42646">&lt; {{profileData.numOfDonors}} &gt;</a>
 						</div>
 						<div class="alert alert-info agre-div" role="alert">
-							Total Donation Amount: &nbsp;&nbsp;&lt; ${{profileData.donorAgre.totalDonation}} &gt;
+							Total Donation Amount: &nbsp;&nbsp;&lt; ${{profileData.totalDonation}} &gt;
 						</div>
 
 					</div>
