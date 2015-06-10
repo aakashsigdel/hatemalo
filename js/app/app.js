@@ -1,5 +1,5 @@
 angular.module('HateMalo', ['ngRoute'])
-	.constant('APIDOMAIN', 'http://asigdel:8080/RESTService')
+	.constant('APIDOMAIN', 'http://tomcat8-aakashsigdel.rhcloud.com')
 	.config(['$routeProvider', function($routeProvider) {
 		$routeProvider
 			.when('/home', {
