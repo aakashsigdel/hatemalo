@@ -1,5 +1,11 @@
 <div class="container">
-	<div class="row">
+	<div ng-hide="isLoaded">
+		<div class="loader spinner-center"></div>
+		<div><b>Loading Please Wait...</b></div>
+	</div>
+
+	<div class="row" ng-show="isLoaded">
+
 		<div class="col-lg-12">
 			<h1 class="pull-left">
 				<div class="well well-sm report-head">
@@ -7,50 +13,54 @@
 				</div>
 			</h1>
 
-			<div class="col-lg-6">
+			<div class="col-lg-12">
 
-				<div ng-repeat="person in assessmentDetails.assessmentDetails" ng-if="$odd">
-					<div>
-						<h4>
-							<div class="label label-primary">
-								{{person.name}}
-							</div>
-						</h4>
+				<div class="col-lg-6">
+
+					<div ng-repeat="person in assessmentDetails.assessmentDetails" ng-if="$even">
+						<div>
+							<h4>
+								<div class="label label-primary">
+									{{person.name}}
+								</div>
+							</h4>
+						</div>
+						<div ng-repeat="(key, value) in person">
+							<h4>
+								<span class="label label-default pull-left">
+									{{key | uppercase}}: {{value}}
+								</span>
+							</h4>
+							<div style="clear:both"></div>
+						</div>
+						<hr width="100%">
 					</div>
-					<div ng-repeat="(key, value) in person">
-						<h4>
-							<span class="label label-default pull-left">
-								{{key | uppercase}}: {{value}}
-							</span>
-						</h4>
-						<div style="clear:both"></div>
-					</div>
-					<hr width="100%">
+
 				</div>
 
-			</div>
+				<div class="col-lg-6">
 
-			<div class="col-lg-6">
+					<div ng-repeat="person in assessmentDetails.assessmentDetails" ng-if="$odd">
+						<div>
+							<h4>
+								<div class="label label-primary">
+									{{person.name}}
+								</div>
+							</h4>
+						</div>
+						<div ng-repeat="(key, value) in person">
+							<h4>
+								<span class="label label-default pull-left">
+									{{key | uppercase}}: {{value}}
+								</span>
+							</h4>
 
-				<div ng-repeat="person in assessmentDetails.assessmentDetails" ng-if="$even">
-					<div>
-						<h4>
-							<div class="label label-primary">
-								{{person.name}}
-							</div>
-						</h4>
+							<div style="clear:both"></div>
+
+						</div>
+						<hr width="100%">
 					</div>
-					<div ng-repeat="(key, value) in person">
-						<h4>
-							<span class="label label-default pull-left">
-								{{key | uppercase}}: {{value}}
-							</span>
-						</h4>
 
-						<div style="clear:both"></div>
-
-					</div>
-					<hr width="100%">
 				</div>
 
 			</div>
