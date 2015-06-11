@@ -60,6 +60,7 @@ angular.module('HateMalo')
 	}]);
 */
 	.factory('LoginService', ['$http', function() {
+		var isLoggedIn = false;
 		var groupId = 1;
 		var groupName = "Ktm Club Club";
 		return {
@@ -74,6 +75,12 @@ angular.module('HateMalo')
 			},
 			setGroupName: function(_groupName) {
 				groupName = _groupName;
+			},
+			getSession: function() {
+
+			},
+			login : function(user) {
+
 			}
 		};
 	}]);
